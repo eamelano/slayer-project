@@ -4,9 +4,9 @@ import React from "react";
 
 const SiteNavbar = () => {
   return (
-    <Navbar bg="light" variant="dark">
+    <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt=""
             src="/logo.svg"
@@ -14,7 +14,7 @@ const SiteNavbar = () => {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          React Bootstrap
+          Project Slayer
         </Navbar.Brand>
       </Container>
     </Navbar>
