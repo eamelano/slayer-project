@@ -10,6 +10,7 @@ import React from "react";
 import "./sitenav.css";
 import pfp from "../../assets/images/ProfileAvatar.png";
 import UserProfile from "../user/UserProfile";
+import "../user/userprofile.css";
 
 const SiteNavbar = ({ user }) => {
   //#region State
