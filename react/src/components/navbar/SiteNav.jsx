@@ -11,25 +11,36 @@ import "./sitenav.css";
 import pfp from "../../assets/images/ProfileAvatar.png";
 import UserProfile from "../user/UserProfile";
 
-const SiteNavbar = () => {
-  const getUserProfile = () => {
-    return <UserProfile />;
+const SiteNavbar = ({ user }) => {
+  //#region State
+  const [modalVis, setModalVis] = React.useState(false);
+  //#endregion
+
+  const hideModal = () => {
+    setModalVis(false);
+  };
+
+  const showModal = () => {
+    setModalVis(true);
   };
 
   return (
     <>
+      {modalVis && (
+        <UserProfile show={modalVis} user={user} onHide={hideModal} />
+      )}
       <Container fluid>
         <Navbar variant="dark" expand="lg" sticky="top">
           <Container className="navContainer shadow">
             <Image
-              alt=""
+              alt="User Avatar"
               src={pfp}
               thumbnail
               className="pfp me-3"
-              onClick={getUserProfile}
+              onClick={showModal}
             />
             <Navbar.Brand href="/" className="float-start">
-              Slayer Legend
+              {user.name}'s Legend
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse>
