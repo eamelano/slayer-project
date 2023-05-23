@@ -1,9 +1,9 @@
-.navbar {
-  background-color: #1c1611 !important;
+.navContainer {
+  background-color: #29211a !important;
+  max-height: 4rem;
 }
 
 .navbar-brand {
-  margin-left: 4rem !important;
   color: #ffc600;
 }
 
@@ -12,10 +12,7 @@
   border: 1px solid #eaad71 !important;
 }
 
-.profile {
+.pfp {
   width: 4rem;
   height: 4rem;
-  text-align: center;
-  position: absolute;
-  z-index: 1041;
 }

@@ -13,16 +13,15 @@ import pfp from "../../assets/images/ProfileAvatar.png";
 const SiteNavbar = () => {
   return (
     <>
-      <Container fluid className="pt-3">
-        <Navbar bg="secondary" variant="dark" expand="lg" sticky="top">
-          <div className="profile">
-            <Image alt="" src={pfp} fluid thumbnail />{" "}
-          </div>
-          <Container fluid>
-            <Navbar.Brand href="/">Slayer Legend</Navbar.Brand>
+      <Container fluid>
+        <Navbar variant="dark" expand="lg" sticky="top">
+          <Container className="navContainer">
+            <Navbar.Brand href="/" className="float-start">
+              <Image alt="" src={pfp} thumbnail className="pfp" /> Slayer Legend
+            </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse>
-              <Nav className="me-auto">
+              <Nav className="me-auto text-white">
                 <Nav.Link>Beginner's Guide</Nav.Link>
                 <Nav.Link>Master Optimizer (WIP)</Nav.Link>
                 <Nav.Link>Builds</Nav.Link>
