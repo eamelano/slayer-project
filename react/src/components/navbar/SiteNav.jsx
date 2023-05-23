@@ -15,7 +15,7 @@ const SiteNavbar = () => {
     <>
       <Container fluid>
         <Navbar variant="dark" expand="lg" sticky="top">
-          <Container className="navContainer">
+          <Container className="navContainer shadow">
             <Navbar.Brand href="/" className="float-start">
               <Image alt="" src={pfp} thumbnail className="pfp" /> Slayer Legend
             </Navbar.Brand>

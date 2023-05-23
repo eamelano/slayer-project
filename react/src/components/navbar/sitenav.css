@@ -1,6 +1,8 @@
 .navContainer {
   background-color: #29211a !important;
   max-height: 4rem;
+  border-radius: 1rem;
+  border: 1px solid #eaad71 !important;
 }
 
 .navbar-brand {
