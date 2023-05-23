@@ -9,15 +9,27 @@ import {
 import React from "react";
 import "./sitenav.css";
 import pfp from "../../assets/images/ProfileAvatar.png";
+import UserProfile from "../user/UserProfile";
 
 const SiteNavbar = () => {
+  const getUserProfile = () => {
+    return <UserProfile />;
+  };
+
   return (
     <>
       <Container fluid>
         <Navbar variant="dark" expand="lg" sticky="top">
           <Container className="navContainer shadow">
+            <Image
+              alt=""
+              src={pfp}
+              thumbnail
+              className="pfp me-3"
+              onClick={getUserProfile}
+            />
             <Navbar.Brand href="/" className="float-start">
-              <Image alt="" src={pfp} thumbnail className="pfp" /> Slayer Legend
+              Slayer Legend
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse>

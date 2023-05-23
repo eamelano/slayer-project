@@ -6,11 +6,11 @@
 }
 
 .navbar-brand {
-  color: #ffc600;
+  color: #ffc600 !important;
 }
 
 .img-thumbnail {
-  background-color: #332b2b;
+  background-color: #332b2b !important;
   border: 1px solid #eaad71 !important;
 }
 
