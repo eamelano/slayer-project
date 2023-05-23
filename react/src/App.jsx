@@ -3,14 +3,15 @@ import { Routes, Route } from "react-router-dom";
 import SiteNav from "./components/navbar/SiteNav";
 
 function App() {
-  const [exampleAccount] = React.useState({
-    name: "Morretti",
+  const [defaultUser] = React.useState({
+    name: "Slayer",
+    isLoggedIn: true,
   });
 
   return (
     <div className="Global d-flex min-vh-100">
       <Routes>
-        <Route path="/*" element={<SiteNav user={exampleAccount} />} />
+        <Route path="/*" element={<SiteNav user={defaultUser} />} />
       </Routes>
     </div>
   );

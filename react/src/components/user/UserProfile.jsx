@@ -1,36 +1,45 @@
 import React from "react";
-import { Modal, Button, Tab, Nav, Tabs } from "react-bootstrap";
+import { Modal, Button, ButtonGroup } from "react-bootstrap";
 import "./userprofile.css";
 
 const UserProfile = ({ user, onHide, show }) => {
-  const [activeTab, setActiveTab] = React.useState("Basic Info");
+  const [activeButton, setActiveButton] = React.useState(true);
 
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
+  const tabSwitch = (e) => {
+    let buttonClassArr = e.target.classList;
+
+    if (buttonClassArr.contains("btn-warning")) {
+    } else {
+      setActiveButton((prevState) => !prevState);
+    }
   };
 
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>
-        <Tabs activeKey={activeTab} onSelect={handleTabChange} fill justify>
-          <Tab eventKey="Basic Info" title="Basic Info" />
-          <Tab eventKey="Appearance" title="Appearance" />
-        </Tabs>
+        <ButtonGroup>
+          <Button
+            className="mx-auto"
+            variant={activeButton ? "warning" : "secondary"}
+            onClick={tabSwitch}
+          >
+            Basic Info
+          </Button>
+          <Button
+            className="mx-auto"
+            variant={activeButton ? "secondary" : "warning"}
+            onClick={tabSwitch}
+          >
+            Appearance
+          </Button>
+        </ButtonGroup>
       </Modal.Header>
-      <Tab.Content>
-        <Modal.Body>
-          <Tab.Pane eventKey="Basic Info">
-            <h4>Tab 1 Content</h4>
-            <p>This is the content for Tab 1.</p>
-          </Tab.Pane>
-        </Modal.Body>
-        <Modal.Body>
-          <Tab.Pane eventKey="Appearance">
-            <h4>Tab 2 Content</h4>
-            <p>This is the content for Tab 2.</p>
-          </Tab.Pane>
-        </Modal.Body>
-      </Tab.Content>
+
+      <Modal.Body>
+        {activeButton && "This is where the player profile will go"}
+        {!activeButton && "This will be for appearance (WIP)"}
+      </Modal.Body>
+
       <Modal.Footer>
         <Button onClick={onHide}>Close</Button>
       </Modal.Footer>
