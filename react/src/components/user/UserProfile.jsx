@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Button, Tab, Nav } from "react-bootstrap";
+import { Modal, Button, Tab, Nav, Tabs } from "react-bootstrap";
 import "./userprofile.css";
 
 const UserProfile = ({ user, onHide, show }) => {
@@ -12,19 +12,10 @@ const UserProfile = ({ user, onHide, show }) => {
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>
-        <Nav
-          variant="tabs"
-          activeKey={activeTab}
-          onSelect={handleTabChange}
-          justify={true}
-        >
-          <Nav.Item>
-            <Nav.Link eventKey="Basic Info">Basic Info</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="Appearance">Appearance</Nav.Link>
-          </Nav.Item>
-        </Nav>
+        <Tabs activeKey={activeTab} onSelect={handleTabChange} fill justify>
+          <Tab eventKey="Basic Info" title="Basic Info" />
+          <Tab eventKey="Appearance" title="Appearance" />
+        </Tabs>
       </Modal.Header>
       <Tab.Content>
         <Modal.Body>
