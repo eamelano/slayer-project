@@ -47,7 +47,7 @@ const SiteNavbar = ({ user }) => {
             <Navbar.Collapse>
               <Nav className="me-auto text-white">
                 <Nav.Link>Beginner's Guide</Nav.Link>
-                <Nav.Link>Master Optimizer (WIP)</Nav.Link>
+                <Nav.Link>Master Optimizer</Nav.Link>
                 <Nav.Link>Builds</Nav.Link>
                 <NavDropdown title="Calculators" menuVariant="dark">
                   <NavDropdown.Item>Action</NavDropdown.Item>
