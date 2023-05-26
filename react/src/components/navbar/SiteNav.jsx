@@ -30,7 +30,7 @@ const SiteNavbar = ({ user }) => {
       {modalVis && (
         <UserProfile show={modalVis} user={user} onHide={hideModal} />
       )}
-      <Container fluid>
+      <Container fluid className="globalBackground">
         <Navbar variant="dark" expand="lg" sticky="top">
           <Container className="navContainer shadow">
             <Image

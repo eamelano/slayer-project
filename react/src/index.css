@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
-.Global {
-  background-color: #443323;
+.globalBackground {
+  background-color: black !important;
+}
+
+.middleCol {
+  background-color: #443323 !important;
 }
