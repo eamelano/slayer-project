@@ -5,9 +5,17 @@ const Landing = () => {
   return (
     <Container fluid>
       <Row className="d-flex min-vh-100">
-        <Col sm={2} className="globalBackground"></Col>
-        <Col sm={8} className="middleCol"></Col>
-        <Col sm={2} className="globalBackground"></Col>
+        <Col xs={2} sm={2} className="globalBackground text-white text-center">
+          {" "}
+          Hello hello heloo
+        </Col>
+        <Col xs={8} sm={8} className="middleCol text-white text-center">
+          Hello World
+        </Col>
+        <Col xs={2} sm={2} className="globalBackground text-white text-center">
+          {" "}
+          Hello World
+        </Col>
       </Row>
     </Container>
   );

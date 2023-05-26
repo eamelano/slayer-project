@@ -14,8 +14,12 @@ import "../user/userprofile.css";
 
 const SiteNavbar = ({ user }) => {
   //#region State
+
   const [modalVis, setModalVis] = React.useState(false);
+
   //#endregion
+
+  //#region Button Functionality
 
   const hideModal = () => {
     setModalVis(false);
@@ -24,6 +28,8 @@ const SiteNavbar = ({ user }) => {
   const showModal = () => {
     setModalVis(true);
   };
+
+  //#endregion
 
   return (
     <>
